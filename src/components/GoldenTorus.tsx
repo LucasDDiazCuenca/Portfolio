@@ -8,23 +8,23 @@ const torusGeometry: THREE.TorusGeometry = new THREE.TorusGeometry(1, 0.55, 30, 
 
 const GoldenTorus = (): React.ReactElement => {
 	const [matCapTexture] = useMatcapTexture("71623B_ECDE8C_30250A_ABA69A", 512) as THREE.Texture[];
-	const rightTorus = createRef<THREE.Mesh>();
-	const leftTorus = createRef<THREE.Mesh>();
-	const firstLeftTorus = createRef<THREE.Mesh>();
+	const rightTopTorus = createRef<THREE.Mesh>();
+	const rightBottomTorus = createRef<THREE.Mesh>();
+	const LeftTorus = createRef<THREE.Mesh>();
 	const particleColors: THREE.Color = new THREE.Color("#ffbf00");
 
 	useFrame((_, delta) => {
-		if (firstLeftTorus.current) {
-			firstLeftTorus.current.rotation.y += delta * 0.3;
+		if (LeftTorus.current) {
+			LeftTorus.current.rotation.y += delta * 0.3;
 		}
 
-		if (leftTorus.current) {
-			leftTorus.current.rotation.y += delta * 0.2;
-			leftTorus.current.rotation.x += delta * 0.2;
+		if (rightBottomTorus.current) {
+			rightBottomTorus.current.rotation.y += delta * 0.2;
+			rightBottomTorus.current.rotation.x += delta * 0.2;
 		}
-		if (rightTorus.current) {
-			rightTorus.current.rotation.y += delta * 0.2;
-			rightTorus.current.rotation.x += delta * 0.2;
+		if (rightTopTorus.current) {
+			rightTopTorus.current.rotation.y += delta * 0.2;
+			rightTopTorus.current.rotation.x += delta * 0.2;
 		}
 	});
 
@@ -46,7 +46,7 @@ const GoldenTorus = (): React.ReactElement => {
 
 			<Float speed={1} rotationIntensity={2} floatIntensity={0.02} floatingRange={[-0.1, 10]}>
 				<mesh
-					ref={firstLeftTorus}
+					ref={LeftTorus}
 					geometry={torusGeometry}
 					material={material}
 					position={[-4, -1, 1]}
@@ -56,7 +56,7 @@ const GoldenTorus = (): React.ReactElement => {
 
 			<Float speed={1} rotationIntensity={1} floatIntensity={0.01} floatingRange={[-0.1, 10]}>
 				<mesh
-					ref={rightTorus}
+					ref={rightTopTorus}
 					geometry={torusGeometry}
 					material={material}
 					position={[3, 1.3, 1]}
@@ -66,10 +66,10 @@ const GoldenTorus = (): React.ReactElement => {
 
 			<Float speed={1} rotationIntensity={0.2} floatIntensity={0.01} floatingRange={[-0.1, 10]}>
 				<mesh
-					ref={leftTorus}
+					ref={rightBottomTorus}
 					geometry={torusGeometry}
 					material={material}
-					position={[15, -8, -8]}
+					position={[10, -6, -8]}
 					scale={1 + Math.random() * 0.2}
 				></mesh>
 			</Float>
