@@ -34,7 +34,7 @@ const Menu = (): React.ReactElement => {
 				<div className="p-3 border-b border-transparent hover:border-yellow-500 hover:text-yellow-500 transition-all flex flex-wrap sm:justify-center sm:items-center gap-5 hover:yellow-filter">
 					<h1 className="text-3xl">Lucas Diaz</h1>
 					<span>
-						<img src="icons/logo.png" alt="icon of a cube, its the logo of my portfolio" width={50} />
+						<img src="icons/logo.png" alt="icon of a cube, its the logo of my portfolio" width={40} />
 					</span>
 				</div>
 			</div>

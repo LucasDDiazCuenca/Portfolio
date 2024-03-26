@@ -21,7 +21,7 @@ const Home = (): React.ReactElement => {
 
 				<Skills />
 
-				<div className="absolute top-[74rem] z-10 h-[110rem] sm:h-[45rem] md:h-[32.2rem] xl:h-[76rem] w-full m-2">
+				<div className="absolute top-[74rem] z-10 h-[110rem] sm:h-[45rem] md:h-[32.2rem] xl:h-[85rem] w-full">
 					<Canvas>
 						<GoldenTorus />
 					</Canvas>
