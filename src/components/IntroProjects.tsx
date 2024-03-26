@@ -14,18 +14,20 @@ const IntroProjects = (): React.ReactElement => {
 			<div className="w-full sm:w-10/12 xl:w-8/12">
 				<div className="mb-10">
 					<div className="flex flex-col sm:flex-row gap-10 xl:justify-center">
-						<img
-							src="./isolink.png"
-							alt="image of the app called isolink"
-							className="rounded-3xl w-full sm:w-6/12 xl:w-4/12"
-						/>
+						<div className="aspect-auto w-full sm:w-6/12">
+							<img
+								src="./isolink.png"
+								alt="image of the app called isolink"
+								className="rounded-xl w-full"
+							/>
+						</div>
 
 						<div className="w-full sm:w-6/12 xl:w-5/12">
 							<h3 className="text-xl text-yellow-400">Iso Link</h3>
 							<p>
-								Social app that allows to interact with others by creating and customizing an avatar and
-								entering into a 3D isometric room. I&apos;ts an immersive way to communicate or even
-								using it as a tool in workspaces.
+								A social app enabling users to send messages while navigating a customizable avatar
+								within a 3D isometric room. This immersive experience serves as a unique communication
+								platform and a potential tool for workspaces.
 							</p>
 							<a
 								className="text-yellow-200"
@@ -50,11 +52,13 @@ const IntroProjects = (): React.ReactElement => {
 
 				<div className="mb-10 ">
 					<div className="flex flex-col sm:flex-row gap-10 xl:justify-center">
-						<img
-							src="./socialPortal.png"
-							alt="image of the app called isolink"
-							className="rounded-3xl w-full sm:w-6/12 xl:w-4/12"
-						/>
+						<div className="aspect-auto w-full sm:w-6/12">
+							<img
+								src="./socialPortal.png"
+								alt="image of the app called isolink"
+								className="rounded-xl w-full"
+							/>
+						</div>
 
 						<div className="w-full sm:w-6/12 xl:w-5/12">
 							<h3 className="text-xl text-yellow-400">Social Portal</h3>
