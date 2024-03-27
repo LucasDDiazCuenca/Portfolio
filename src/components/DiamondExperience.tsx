@@ -1,10 +1,9 @@
 import { useRef } from "react";
-import { Canvas, useLoader, useFrame, ObjectMap } from "@react-three/fiber";
+import { Canvas, useLoader, useFrame } from "@react-three/fiber";
 import { useGLTF, Environment, OrbitControls, MeshRefractionMaterial } from "@react-three/drei";
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
 import { RGBELoader } from "three-stdlib";
 import * as THREE from "three";
-import { type GLTF } from "three-stdlib";
 
 interface DiamondProps {
 	rotation: [number, number, number];
@@ -13,7 +12,8 @@ interface DiamondProps {
 
 function Diamond(props: DiamondProps): React.ReactElement {
 	const ref = useRef<THREE.Mesh>(null);
-	const { nodes }: GLTF & ObjectMap = useGLTF("/dflat.glb");
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	const { nodes }: any = useGLTF("/dflat.glb");
 
 	// Use a custom envmap/scene-backdrop for the diamond material
 	const texture = useLoader(
