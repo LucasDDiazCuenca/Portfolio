@@ -14,7 +14,7 @@ body,
 	background-color: #131313;
 	font-family: "Inconsolata", monospace;
 }
-
+/* this class is used in the header (Menu.jsx) icon to change the color of the icon when hovered */
 .hover\:yellow-filter:hover {
 	filter: invert(0.3) sepia(1) saturate(3) hue-rotate(0deg);
 }
